@@ -1,0 +1,1 @@
+C:/Users/Sneha/anaconda3/AI/python.exe -m http.server --bind localhost  --cgi 80
