@@ -37,12 +37,12 @@ body {
 }
 .top-container {
     padding: 30px;
-    width: 100%; height: 100vh; background: #7F1431; color: #fff; display: flex; text-align: center; justify-content: center; align-items: center;
+    width: 100%; height: 100vh; background: #390128; color: #fff; display: flex; text-align: center; justify-content: center; align-items: center;
 }
 
 .header {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding: 0px 16px;
     background: #0f0f0ff0;
     color: #f1f1f1f1;
@@ -51,7 +51,7 @@ body {
 
 footer {
     text-align: center;
-    font-size: 7px;
+    font-size: .5rem;
     background-attachment: scroll;
     background-position: 0% 0%;
     position: fixed;
@@ -64,19 +64,19 @@ footer {
 }
 .typing{
     place-self: center;
-    border-radius: 2.5vw;
+    border-radius: 5vw;
     border-color: black;
     padding-left: 5vh;
     padding-right: 5vh;
     padding-top: 15px;
     padding-bottom: 2px;
-    background-color: #7F1431d0
+    background-color: #390128d0
 }
 
 
 .section {
     height: 100vh;
-    width: auto;
+    width: 100%;
     padding-left: 10vw;
     padding-right: 10vw;
     text-align: center;
@@ -94,7 +94,7 @@ color:#fff
 }
 .bg3 {
   background-color: #61126f;
-  color:#fff
+  color:#fff;
   }
 
 .revealUp {
@@ -107,9 +107,10 @@ background-color: #ffffff;
 }
 
 .box1{
+  font-size: 1.25rem;
     flex:2;
     text-align: center;
-    height: 720px;
+    height: 750px;
 }
 
 .box2{
@@ -124,7 +125,7 @@ background-position: center;
 background-repeat: repeat;
 background-size: 7%;
   display: flex;
-  height: 720px;
+  height: 850px;
 }
 
 #player{
@@ -136,7 +137,24 @@ background-size: 7%;
   width:30vh;
   height: auto;
 }
-@media(max-width: 600px){
+.top-rightdes{
+  position: absolute; 
+  z-index:3;
+  width: 350px;
+  left:76.2vw
+}
+@media(max-width: 1000px){
+  .top-rightdes{
+    left:64vw
+  }
+  .bg3{
+  height: 130vh;
+  }
+  .box1{
+    height: 950px;
+  }
+}
+@media(max-width: 700px){
     .container{
         height: 1440px;
         flex-direction: column;
@@ -153,25 +171,32 @@ background-size: 7%;
     }
     .section{
       height: 160vh;
+      font-size: 1rem;
     }
     .typing{
-	font-size: 2rem
+	font-size: 1.5rem
+    }
+    .top-rightdes{
+      left:41vw
+    }
+    .bg3{
+      height: 140vh;
     }
 }
 h2{
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 h3{
-    font-size: 30px;
+    font-size: 2rem;
     margin-bottom: 0;
 
 }
 h4{
-    font-size: 20px;
+    font-size: 1.5rem;
     margin:0
 }
 p{
-    margin-left: 10px;
+    margin-left: 1rem;
     margin-right: 10px;
 }
 
@@ -196,7 +221,7 @@ img {vertical-align: middle;}
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.1rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -216,7 +241,7 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 1rem;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -227,7 +252,7 @@ img {vertical-align: middle;}
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: .8rem;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -261,8 +286,8 @@ img {vertical-align: middle;}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 600px) {
-  .prev, .next,.text {font-size: 11px}
+@media only screen and (max-width: 700px) {
+  .prev, .next,.text {font-size: .8rem}
 }
 
 /* The Modal (background) */
@@ -310,7 +335,7 @@ img {vertical-align: middle;}
   .close {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 1.4rem;
     font-weight: bold;
   }
   
@@ -339,8 +364,8 @@ img {vertical-align: middle;}
 
 .scroll-down{
   position: relative;
-  width: 7vw;
-  height:5vh;
+  width: 100px;
+  height:45px;
   margin-top:20px;
   -webkit-animation: mover 2s infinite  alternate;
   animation: mover 2s infinite  alternate;
@@ -368,7 +393,7 @@ img {vertical-align: middle;}
   display:table;
   clear: both;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   .col{
     width:100%;
   }
@@ -397,7 +422,20 @@ img {vertical-align: middle;}
 }
 .footer{
   width:100%;
-  height: 50vh;
-  background-color: #7F1431;
+  height: 100vh;
+  background-color: #390128;
   display: grid;
+  text-align: center;
+  /*#7F1431*/
+}
+.hidden{
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter:blur(0px);
+  transform: translateX(0);
 }
