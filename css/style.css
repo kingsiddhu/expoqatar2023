@@ -64,7 +64,7 @@ footer {
 }
 .typing{
     place-self: center;
-    border-radius: 100vw;
+    border-radius: 2.5vw;
     border-color: black;
     padding-left: 5vh;
     padding-right: 5vh;
@@ -152,7 +152,7 @@ background-size: 7%;
         width: 100px
     }
     .section{
-      height: 150vh;
+      height: 160vh;
     }
     .typing{
 	font-size: 2rem
