@@ -13,11 +13,26 @@
   <body>
     <div class="header" id="myHeader">
       <h2 style="margin:10px"><img src="img/QE23Logo.PNG" style="width: auto; height: 7.5vh;z-index: 3;margin:0px"/><span style="font-size: 5vh; position: relative;margin:0px;font-weight: 100;"> | </span><img src="img/ExpoLogo.PNG" style="width: auto; height: 7.5vh;z-index: 1;"/></h2>
+      <div class="text-menu">
+        <a class='items' href="">About Expo</a>
+        <a class='items' href="">Sub-Themes</a>
+        <a class='items' href="">Take Part</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" style="font-size: 3rem;">☰</button>
+        <div class="dropdown-content">
+          <a href="">About Expo</a>
+        <a href="">Sub-Themes</a>
+        <a href="">Take Part</a>
+        </div>
+      </div>
+      
     </div>
 
 
 
     <div class="video-container">
+      
       <img src="img/awareness-pattern.png" style="position: absolute; z-index:3; width: 150px;top:75px;left:30px">
       <img src="img/expo-in-numbers-graphic-3.svg" class="top-rightdes">
       <video autoplay muted loop class="videobg">
@@ -58,78 +73,10 @@
     </div>
     
     <div class="spacer">
-      <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
+      
           <img src="img/01_7-photo_website_1920x1080_72dpi_20211025.jpg" style="width:100%">
-          <div class="text">Expo House</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="img/expo2023_19038_202_souq_ok.jpg" style="width:100%">
-          <div class="text"></div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="img/01_4-photo.jpg" style="width:100%">
-          <div class="text"></div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="img/horticultural-expo-1.webp" style="width:100%">
-          <div class="text"></div>
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span> 
-        </div>
-        
-        <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
+          
     </div>
-    <!-- partial -->
-      <script src='./js/gsap-latest-beta.min.js'></script>
-    <script src='./js/ScrollTrigger.min.js'></script>
-    <script  src="./js/scroll.js"></script>
 
 
     <div class="container">
@@ -258,7 +205,7 @@
     </div>
     <div class="modal-body">
       <video id="player" playsinline controls class="videoP" data-poster="/img/video-capture-1165.jpg">
-        <source src="https://www.unlockbrands.com/media/1397/expo_2021_h264_50mb.mp4">
+        <source src="/img/Expo 2023 Doha Qatar _ Promotional Video.mp4">
       </video>
       
       <script src="/js/demo.js"></script>
