@@ -54,7 +54,7 @@ body {
 
 footer {
     text-align: center;
-    font-size: .5rem;
+    font-size: .75rem;
     background-attachment: scroll;
     background-position: 0% 0%;
     position: fixed;
@@ -62,8 +62,8 @@ footer {
     left: 10px;
     color: #fff;
     background-color: #00000090;
-    border-radius: 10px;
-    padding:5px
+    border-radius: 100px;
+    padding:10px
 }
 .typing{
     place-self: center;
@@ -106,7 +106,9 @@ visibility: hidden;
 }
 .spacer {
 height: auto;
-background-color: #ffffff;
+background-color: #ffffff90;
+display: grid;
+place-items: center;
 }
 
 .box1{
@@ -157,7 +159,7 @@ background-size: 7%;
     height: 950px;
   }
 }
-@media(max-width: 700px){
+@media(max-width: 850px){
     .container{
         height: 1440px;
         flex-direction: column;
@@ -173,7 +175,7 @@ background-size: 7%;
         width: 100px
     }
     .section{
-      height: 160vh;
+      height: 170vh;
       font-size: 1rem;
     }
     .typing{
@@ -198,96 +200,6 @@ h4{
 p{
     margin-left: 1rem;
     margin-right: 10px;
-}
-
-* {box-sizing: border-box}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 1rem;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: .8rem;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #353535;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 700px) {
-  .prev, .next,.text {font-size: .8rem}
 }
 
 /* The Modal (background) */
@@ -379,25 +291,6 @@ img {vertical-align: middle;}
   100% { transform: translateY(-20px); }
 }
 
-.col{
-  float:left;
-  width:50%;
-  padding: 10px;
-  height: auto;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-.row:after{
-  content: "";
-  display:table;
-  clear: both;
-}
-@media screen and (max-width: 700px){
-  .col{
-    width:100%;
-  }
-}
 .txtonpic{
   position:relative;
   text-align: right;
@@ -461,6 +354,7 @@ img {vertical-align: middle;}
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  right: 7.5px;
 }
 
 /* Links inside the dropdown */
@@ -478,7 +372,6 @@ img {vertical-align: middle;}
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 .text-menu{
   padding: 3.5vh 0;
@@ -493,12 +386,46 @@ img {vertical-align: middle;}
 .items:hover{
   text-decoration:underline
 }
-@media(max-width:850px) {
+.div-green{
+  margin-left: 30vh;
+  z-index: 3;
+  background-color:hsla(180,72.88135593%,11.56862745%,0.9);
+  padding:2rem;
+  width:auto;
+  height: auto;
+  color:white
+}
+@media(max-width:900px) {
   .text-menu{
     display:none
   }
   .dropdown{
     display: inline-block;
   }
+  .div-green{
+    margin-left: 0%;
+  }
 }
 
+.row {
+  display: grid;
+  font-size: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.col {
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+.carousel-control-prev, .carousel-control-next{
+  background-color: #00000090;
+}
+.banner{
+  width:80%
+}
